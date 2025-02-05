@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 
   return Response.json(
     {
-      accessToken: jwt.sign({ foo: 'bar' }, 'secret', { expiresIn: '1m' }),
+      accessToken: jwt.sign({ foo: 'bar' }, 'secret', { expiresIn: '1d' }),
       refreshToken: jwt.sign({ foo: 'bar' }, 'secret', { expiresIn: '7d' }),
     },
     {
