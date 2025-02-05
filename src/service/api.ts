@@ -23,28 +23,29 @@ api.interceptors.request.use(function (config) {
 api.interceptors.response.use(
   (response) => response,
   async (error) => {
-    if (error.response.status !== 401) return Promise.reject(error);
+    const originalRequest = error.config;
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      try {
+        const { refreshToken, setAccessToken, setRefreshToken } =
+          useAuthStore.getState();
 
-    const { refreshToken, logout, setAccessToken, setRefreshToken } =
-      useAuthStore.getState();
+        if (!refreshToken) return Promise.reject(error);
 
-    if (!refreshToken) return Promise.reject(error);
+        const response = await AuthApi.refresh({
+          token: refreshToken,
+        });
 
-    const response = await AuthApi.refresh({
-      token: refreshToken,
-    });
+        setAccessToken({ accessToken: response.data.accessToken });
+        setRefreshToken({ refreshToken: response.data.refreshToken });
 
-    if (response.status === 401) {
-      logout();
+        error.config.headers.Authorization = `Bearer ${response.data.accessToken}`;
 
-      return Promise.reject(error);
+        return api(error.config);
+      } catch (refreshError) {
+        return Promise.reject(refreshError);
+      }
     }
-
-    setAccessToken({ accessToken: response.data.accessToken });
-    setRefreshToken({ refreshToken: response.data.refreshToken });
-
-    error.config.headers.Authorization = `Bearer ${response.data.accessToken}`;
-
-    return api(error.config);
+    return Promise.reject(error);
   },
 );
