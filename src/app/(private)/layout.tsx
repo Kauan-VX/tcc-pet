@@ -1,22 +1,22 @@
 'use client';
 
-// import { useAuthStore } from '@/store';
+import { useAuthStore } from '@/store';
 import { TopBar } from '@/components';
-// import { redirect } from 'next/navigation';
-// import { useLayoutEffect } from 'react';
+import { redirect } from 'next/navigation';
+import { useLayoutEffect } from 'react';
 
 const PrivateLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  // const { getAccessToken } = useAuthStore();
+  const { getAccessToken } = useAuthStore();
 
-  // useLayoutEffect(() => {
-  //   if (!getAccessToken()) {
-  //     redirect('/');
-  //   }
-  // }, []);
+  useLayoutEffect(() => {
+    if (!getAccessToken()) {
+      redirect('/');
+    }
+  }, []);
 
   return (
     <section>
