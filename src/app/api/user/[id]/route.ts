@@ -8,7 +8,7 @@ export async function DELETE(
   const auth = authValidator(request.headers.get('Authorization') || '');
 
   if (!auth) {
-    return Response.json({ error: 'Unauthorized' }, { status: 400 });
+    return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
   const userIndex = users.findIndex((user) => user.id === Number(id));
@@ -43,8 +43,9 @@ export async function PUT(
   const auth = authValidator(request.headers.get('Authorization') || '');
 
   if (!auth) {
-    return Response.json({ error: 'Unauthorized' }, { status: 400 });
+    return Response.json({ error: 'Unauthorized' }, { status: 401 });
   }
+
   const { user } = await request.json();
 
   console.log({ users });

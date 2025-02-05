@@ -7,4 +7,9 @@ export const AuthApi = {
   recoveryPassword: async ({ email }: { email: string }) => {
     return await api.post('/forgot-password', { email });
   },
+  refresh: async ({ token }: { token: string }) => {
+    return await api.post('/refresh', {
+      token,
+    });
+  },
 };

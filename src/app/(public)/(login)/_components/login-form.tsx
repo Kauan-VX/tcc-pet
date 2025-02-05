@@ -7,7 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { AuthApi } from '@/service/endpoints';
 import { useMutation } from '@tanstack/react-query';
 import { LoginFormDataType, loginSchema } from '@/schemas';
-import { useAccessTokenStore } from '@/store';
+import { useAuthStore } from '@/store';
 import { useToast } from '@/hooks/use-toast';
 import { onError } from '@/utils';
 import Link from 'next/link';
@@ -21,18 +21,18 @@ const LoginForm = () => {
     defaultValues: { email: '', password: '' },
   });
   const { mutateAsync, isLoading } = useMutation({ mutationFn: AuthApi.login });
-  const { setAccessToken } = useAccessTokenStore();
+  const { setAccessToken, setRefreshToken } = useAuthStore();
 
   const onSubmit = async ({ email, password }: LoginFormDataType) => {
     try {
-      const {
-        data: {
-          data: { Tokens },
-        },
-      } = await mutateAsync({ email, password });
+      const { data } = await mutateAsync({ email, password });
 
       setAccessToken({
-        accessToken: Tokens.AccessToken,
+        accessToken: data.accessToken,
+      });
+
+      setRefreshToken({
+        refreshToken: data.refreshToken,
       });
 
       router.push('/dashboard');

@@ -2,11 +2,11 @@
 
 import { Button } from './button';
 import Link from 'next/link';
-import { useAccessTokenStore } from '@/store';
+import { useAuthStore } from '@/store';
 import { useRouter } from 'next/navigation';
 
 export const TopBar = () => {
-  const { logout } = useAccessTokenStore();
+  const { logout } = useAuthStore();
   const router = useRouter();
 
   return (
