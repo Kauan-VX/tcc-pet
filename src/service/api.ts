@@ -25,7 +25,8 @@ api.interceptors.response.use(
   async (error) => {
     if (error.response.status !== 401) return Promise.reject(error);
 
-    const { refreshToken, logout, setAccessToken } = useAuthStore.getState();
+    const { refreshToken, logout, setAccessToken, setRefreshToken } =
+      useAuthStore.getState();
 
     if (!refreshToken) return Promise.reject(error);
 
@@ -35,10 +36,12 @@ api.interceptors.response.use(
 
     if (response.status === 401) {
       logout();
+
       return Promise.reject(error);
     }
 
     setAccessToken({ accessToken: response.data.accessToken });
+    setRefreshToken({ refreshToken: response.data.refreshToken });
 
     error.config.headers.Authorization = `Bearer ${response.data.accessToken}`;
 
