@@ -1,10 +1,9 @@
-'use client';
-
 import localFont from 'next/font/local';
-import './globals.css';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { useState } from 'react';
-import { Toaster } from '@/components/ui/toaster';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
+import { ReactNode } from 'react';
+import './styles/globals.scss';
+import QueryProvider from './query-provider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -17,22 +16,24 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const [queryClient] = useState(() => new QueryClient());
+type Props = {
+  children: ReactNode;
+};
+
+export default async function LocaleLayout({ children }: Props) {
+  const locale = await getLocale();
 
   return (
-    <html lang="en">
+    <html lang={locale}>
+      <head>
+        <title>next-intl example</title>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <QueryClientProvider client={queryClient}>
-          {children}
-          <Toaster />
-        </QueryClientProvider>
+        <QueryProvider>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </QueryProvider>
       </body>
     </html>
   );
