@@ -14,6 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { onError } from '@/utils';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Icon from '@/shared/icon/icon';
 
 const LoginForm = () => {
   const router = useRouter();
