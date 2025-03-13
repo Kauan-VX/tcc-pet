@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  front-end:
+    container_name: BOILERPLATE
+    network_mode: host
+    image: node:20
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"
+    environment: 
+      - NEXT_PUBLIC_API_URL=/api
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+
+
+
