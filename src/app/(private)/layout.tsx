@@ -1,11 +1,10 @@
 'use client';
 
 import { useAccessTokenStore } from '@/store';
-import TopBar from '@/components/top-bar';
 import { redirect } from 'next/navigation';
 import { useLayoutEffect } from 'react';
 import { withAuth } from '@/hoc/with-auth';
-
+import { Navbar } from '@/components/ui/navbar';
 const PrivateLayout = ({
   children,
 }: Readonly<{
@@ -13,15 +12,15 @@ const PrivateLayout = ({
 }>) => {
   const { getAccessToken } = useAccessTokenStore();
 
-  useLayoutEffect(() => {
-    if (!getAccessToken()) {
-      redirect('/login');
-    }
-  }, []);
+  // useLayoutEffect(() => {
+  //   if (!getAccessToken()) {
+  //     redirect('/login');
+  //   }
+  // }, []);
 
   return (
-    <section>
-      <TopBar />
+    <section className="container mx-auto">
+      <Navbar />
       {children}
     </section>
   );

@@ -14,6 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 import { onError } from '@/utils';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -24,6 +25,7 @@ const LoginForm = () => {
   });
   const { mutateAsync, isLoading } = useMutation({ mutationFn: AuthApi.login });
   const { setAccessToken } = useAccessTokenStore();
+  const t = useTranslations('LoginPage');
 
   const onSubmit = async ({ email, password }: LoginFormDataType) => {
     try {
@@ -33,7 +35,7 @@ const LoginForm = () => {
 
       setAccessToken({ accessToken: token });
 
-      router.push('/dashboard');
+      router.push('/home');
     } catch (error: unknown) {
       console.log(error);
 
@@ -45,15 +47,15 @@ const LoginForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <InputField name="email" label="Endereço de e-mail" />
-        <PasswordField name="password" label="Senha" />
+        <InputField name="email" label={t('email')} />
+        <PasswordField name="password" label={t('password')} />
         <div className="text-right">
           <Link href="/forgot-password" className="text-sm text-blue-500">
-            Esqueci minha senha
+            {t('forgotPassword')}
           </Link>
         </div>
         <Button type="submit" className="w-full" isLoading={isLoading}>
-          INICIAR SESSÃO
+          {t('signIn')}
         </Button>
       </form>
     </Form>

@@ -1,0 +1,26 @@
+{
+  "LoginPage": {
+    "email": "Endereço de e-mail",
+    "invalidPassword": "Por favor, insira uma senha.",
+    "password": "Senha",
+    "title": "Bem-vindo de volta",
+    "forgotPassword": "Esqueci minha senha",
+    "signIn": "Entrar"
+  },
+  "LocaleSwitcher": {
+    "pt": "Português",
+    "en": "English",
+    "es": "Espanhol",
+    "label": "Linguagem"
+  },
+  "ForgotPassword": {
+    "email": "Endereço de e-mail",
+    "title": "Redefinir senha",
+    "back": "Voltar",
+    "redefinitionLink": "Enviar link de redefinição"
+  },
+  "Home": {
+    "title": "Apresentação Boilerplate",
+    "result": "Resultado"
+  }
+}

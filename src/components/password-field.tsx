@@ -9,7 +9,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { UseControllerProps } from 'react-hook-form';
-import { EyeIcon, EyeOffIcon } from 'lucide-react';
+import Icon from '@/shared/icon/icon';
 
 interface PasswordFieldProps extends UseControllerProps {
   label?: string;
@@ -47,13 +47,13 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
               <button
                 type="button"
                 onClick={togglePasswordVisibility}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+                className="absolute right-2  top-1/2 transform -translate-y-1/2 text-gray-500"
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
                 {showPassword ? (
-                  <EyeOffIcon size={18} />
+                  <Icon className="size-4  text-black" name="eye_cancel" />
                 ) : (
-                  <EyeIcon size={18} />
+                  <Icon className="size-4  text-black" name="eye" />
                 )}
               </button>
             </div>

@@ -1,0 +1,26 @@
+{
+  "LoginPage": {
+    "email": "E-mail address",
+    "invalidPassword": "Please enter a password.",
+    "password": "Password",
+    "title": "Welcome back",
+    "forgotPassword": "Forgot my password",
+    "signIn": "Sign in"
+  },
+  "LocaleSwitcher": {
+    "pt": "Portuguese",
+    "en": "English",
+    "es": "Spanish",
+    "label": "Language"
+  },
+  "ForgotPassword": {
+    "email": "E-mail address",
+    "title": "Reset password",
+    "back": "Back",
+    "redefinitionLink": "Send reset link"
+  },
+  "Home": {
+    "title": "Boilerplate presentation",
+    "result": "Result"
+  }
+}

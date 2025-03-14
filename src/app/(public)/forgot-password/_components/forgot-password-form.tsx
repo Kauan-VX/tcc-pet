@@ -11,9 +11,11 @@ import { onError } from '@/utils';
 import InputField from '@/components/input-field';
 import Button from '@/components/button';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function ForgotPasswordForm() {
   const { toast } = useToast();
+  const t = useTranslations('ForgotPassword');
 
   const { mutateAsync, isLoading } = useMutation({
     mutationFn: AuthApi.recoveryPassword,
@@ -41,13 +43,13 @@ export default function ForgotPasswordForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <InputField name="email" label="Endereço de e-mail" />
+        <InputField name="email" label={t('redefinitionLink')} />
         <div className="flex justify-between items-center">
           <Link href="/login" className="text-sm">
-            VOLTAR AO LOGIN
+            {t('back')}
           </Link>
           <Button type="submit" isLoading={isLoading}>
-            ENVIAR LINK DE REDEFINIÇÃO
+            {t('redefinitionLink')}
           </Button>
         </div>
       </form>
