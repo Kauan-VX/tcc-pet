@@ -12,11 +12,11 @@ const PrivateLayout = ({
 }>) => {
   const { getAccessToken } = useAccessTokenStore();
 
-  // useLayoutEffect(() => {
-  //   if (!getAccessToken()) {
-  //     redirect('/login');
-  //   }
-  // }, []);
+  useLayoutEffect(() => {
+    if (!getAccessToken()) {
+      redirect('/login');
+    }
+  }, []);
 
   return (
     <section className="container mx-auto">
