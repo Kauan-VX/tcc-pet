@@ -12,8 +12,8 @@ export default function TopBar() {
   return (
     <div className="top-bar bg-black text-white py-2 px-6 flex items-center justify-between">
       <nav className="flex items-center gap-4 text-sm xl:gap-6">
-        <Link href="/dashboard" className="text-sm hover:text-gray-400">
-          Dashboard
+        <Link href="/home" className="text-sm hover:text-gray-400">
+          Home
         </Link>
 
         <Link href="/users" className="text-sm hover:text-gray-400">

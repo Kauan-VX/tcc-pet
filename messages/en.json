@@ -1,29 +1,26 @@
 {
-  "AppLayout": {
-    "home": "Home",
-    "logout": "Logout",
-    "profile": "Profile"
-  },
-  "HomePage": {
-    "title": "Home"
+  "LoginPage": {
+    "email": "E-mail address",
+    "invalidPassword": "Please enter a password.",
+    "password": "Password",
+    "title": "Welcome back",
+    "forgotPassword": "Forgot my password",
+    "signIn": "Sign in"
   },
   "LocaleSwitcher": {
-    "de": "Deutsch",
+    "pt": "Portuguese",
     "en": "English",
+    "es": "Spanish",
     "label": "Language"
   },
-  "LoginPage": {
-    "credentials": "Credentials: jane@doe.com / next-intl",
-    "description": "Please enter your details.",
-    "email": "Email",
-    "invalidCredentials": "Please check your credentials.",
-    "invalidEmail": "Please enter a valid email address.",
-    "invalidPassword": "Please enter a password.",
-    "login": "Sign in",
-    "password": "Password",
-    "title": "Welcome back"
+  "ForgotPassword": {
+    "email": "E-mail address",
+    "title": "Reset password",
+    "back": "Back",
+    "redefinitionLink": "Send reset link"
   },
-  "ProfilePage": {
-    "title": "Profile"
+  "Home": {
+    "title": "Boilerplate presentation",
+    "result": "Result"
   }
 }

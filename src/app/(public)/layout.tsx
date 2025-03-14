@@ -12,7 +12,7 @@ export default function AuthLayout({
 
   useLayoutEffect(() => {
     if (getAccessToken()) {
-      redirect('/dashboard');
+      redirect('/home');
     }
   }, []);
 

@@ -26,7 +26,7 @@ export default async function LocaleLayout({ children }: Props) {
   return (
     <html lang={locale}>
       <head>
-        <title>next-intl example</title>
+        <title>Boilerplate NextJs</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

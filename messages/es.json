@@ -1,0 +1,26 @@
+{
+  "LoginPage": {
+    "email": "Dirección de correo electrónico",
+    "invalidPassword": "Por favor, ingrese una contraseña.",
+    "password": "Contraseña",
+    "title": "Bienvenido de nuevo",
+    "forgotPassword": "Olvidé mi contraseña",
+    "signIn": "Iniciar sesión"
+  },
+  "LocaleSwitcher": {
+    "pt": "Portugués",
+    "en": "Inglés",
+    "es": "Español",
+    "label": "Idioma"
+  },
+  "ForgotPassword": {
+    "email": "Dirección de correo electrónico",
+    "title": "Restablecer contraseña",
+    "back": "Volver",
+    "redefinitionLink": "Enviar enlace de restablecimiento"
+  },
+  "Home": {
+    "title": "Presentación modelo",
+    "result": "Resultado"
+  }
+}

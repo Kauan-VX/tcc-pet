@@ -1,29 +1,26 @@
 {
-  "AppLayout": {
-    "home": "Início",
-    "logout": "Sair",
-    "profile": "Perfil"
-  },
-  "HomePage": {
-    "title": "Início"
+  "LoginPage": {
+    "email": "Endereço de e-mail",
+    "invalidPassword": "Por favor, insira uma senha.",
+    "password": "Senha",
+    "title": "Bem-vindo de volta",
+    "forgotPassword": "Esqueci minha senha",
+    "signIn": "Entrar"
   },
   "LocaleSwitcher": {
-    "de": "Alemão",
-    "en": "Inglês",
-    "label": "Idioma"
+    "pt": "Português",
+    "en": "English",
+    "es": "Espanhol",
+    "label": "Linguagem"
   },
-  "LoginPage": {
-    "credentials": "Credenciais: jane@doe.com / next-intl",
-    "description": "Por favor, insira seus dados.",
-    "email": "E-mail",
-    "invalidCredentials": "Verifique suas credenciais.",
-    "invalidEmail": "Por favor, insira um endereço de e-mail válido.",
-    "invalidPassword": "Por favor, insira uma senha.",
-    "login": "Entrar",
-    "password": "Senha",
-    "title": "Bem-vindo de volta"
+  "ForgotPassword": {
+    "email": "Endereço de e-mail",
+    "title": "Redefinir senha",
+    "back": "Voltar",
+    "redefinitionLink": "Enviar link de redefinição"
   },
-  "ProfilePage": {
-    "title": "Perfil"
+  "Home": {
+    "title": "Apresentação Boilerplate",
+    "result": "Resultado"
   }
 }

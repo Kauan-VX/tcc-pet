@@ -1,17 +1,19 @@
 'use client';
 
-import { Button, InputField, PasswordField } from '@/components';
 import { Form } from '@/components/ui';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AuthApi } from '@/service/endpoints';
 import { useMutation } from '@tanstack/react-query';
 import { LoginFormDataType, loginSchema } from '@/schemas';
-import { useAuthStore } from '@/store';
 import { useToast } from '@/hooks/use-toast';
 import { onError } from '@/utils';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import InputField from '@/components/input-field';
+import PasswordField from '@/components/password-field';
+import Button from '@/components/button';
+import { useAuthStore } from '@/store/use-auth';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -35,7 +37,7 @@ const LoginForm = () => {
         refreshToken: data.refreshToken,
       });
 
-      router.push('/dashboard');
+      router.push('/home');
     } catch (error: unknown) {
       console.log(error);
 
