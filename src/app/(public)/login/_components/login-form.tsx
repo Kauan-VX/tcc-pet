@@ -50,7 +50,7 @@ const LoginForm = () => {
         <InputField name="email" label={t('email')} />
         <PasswordField name="password" label={t('password')} />
         <div className="text-right">
-          <Link href="/forgot-password" className="text-sm text-blue-500">
+          <Link href="/forgot-password" className="text-sm text-black">
             {t('forgotPassword')}
           </Link>
         </div>
