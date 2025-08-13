@@ -16,7 +16,7 @@ const PrivateLayout = ({
     if (!getAccessToken()) {
       redirect('/login');
     }
-  }, []);
+  });
 
   return (
     <section className="container mx-auto">

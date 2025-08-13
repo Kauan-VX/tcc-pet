@@ -14,7 +14,7 @@ export default function AuthLayout({
     if (getAccessToken()) {
       redirect('/home');
     }
-  }, []);
+  });
 
   return <section>{children}</section>;
 }

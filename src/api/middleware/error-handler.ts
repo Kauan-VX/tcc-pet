@@ -6,12 +6,14 @@ export async function withErrorHandling(
 ): Promise<NextResponse> {
   try {
     return await handler(req);
-  } catch (error: any) {
+  } catch (error) {
+    if (!(error instanceof Error)) {
+      throw error;
+    }
     console.error('API error:', error);
 
-    const status = error.status || 500;
     const message = error.message || 'Erro interno do servidor';
 
-    return NextResponse.json({ error: message }, { status });
+    return NextResponse.json({ error: message });
   }
 }
