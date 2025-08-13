@@ -1,20 +1,17 @@
-'use client';
-import { useTranslations } from 'next-intl';
-import ForgorPasswordForm from './_components/forgot-password-form';
+import { Metadata } from 'next';
+import ForgotPasswordPage from './_components/forgot-password-page';
+import { createMetadata } from '@/lib/metadata';
 
-const ForgotPassword = () => {
-  const t = useTranslations('ForgotPassword');
+export const metadata: Metadata = createMetadata({
+  title: 'Recupere sua senha do Boilerplate',
+  description:
+    'Esqueceu sua senha do Boilerplate? Recupere facilmente o acesso à sua conta com nosso processo seguro de recuperação de senha.',
+  keywords:
+    'recuperar senha boilerplate, esqueci senha boilerplate, redefinir senha boilerplate',
+  path: '/forgot-password',
+  noIndex: false,
+});
 
-  return (
-    <>
-      <div className="flex flex-col justify-center align-center p-4 max-w-md mx-auto h-screen">
-        <h1 className="text-3xl font-semibold mb-10 text-center">
-          {t('title')}
-        </h1>
-        <ForgorPasswordForm />
-      </div>
-    </>
-  );
-};
-
-export default ForgotPassword;
+export default function Page() {
+  return <ForgotPasswordPage />;
+}

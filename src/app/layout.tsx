@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import './styles/globals.scss';
 import QueryProvider from './query-provider';
 import { Metadata } from 'next';
+import { defaultMetadata } from '@/lib/metadata';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -21,10 +22,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const metadata: Metadata = {
-  title: 'Boilerplate NextJs',
-  description: 'Boilerplate NextJs',
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default async function LocaleLayout({ children }: Props) {
   const locale = await getLocale();
