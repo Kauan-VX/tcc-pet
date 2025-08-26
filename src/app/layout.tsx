@@ -2,7 +2,7 @@ import localFont from 'next/font/local';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
-import './styles/globals.scss';
+import './styles/globals.css';
 import QueryProvider from './query-provider';
 import { Metadata } from 'next';
 import { defaultMetadata } from '@/lib/metadata';
