@@ -21,6 +21,10 @@
   },
   "Home": {
     "title": "Apresentação Boilerplate",
-    "result": "Resultado"
+    "result": "Resultado",
+    "subtitle": "Este é um boilerplate para iniciar novos projetos com Next.js, TypeScript, Tailwind CSS e outras tecnologias modernas.",
+    "exampleComponentsTitle": "Exemplos de componentes",
+    "exampleComponentsDescription": "Veja alguns exemplos de componentes reutilizáveis criados com Radix UI e Tailwind CSS.",
+    "exampleHooksDescription": "Veja alguns exemplos de hooks reutilizáveis criados com React e TypeScript."
   }
 }

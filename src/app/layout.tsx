@@ -1,11 +1,12 @@
-import localFont from 'next/font/local';
+import { defaultMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
+import { ThemeProvider } from 'next-themes';
+import localFont from 'next/font/local';
 import { ReactNode } from 'react';
-import './styles/globals.css';
 import QueryProvider from './query-provider';
-import { Metadata } from 'next';
-import { defaultMetadata } from '@/lib/metadata';
+import './styles/globals.css';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -28,12 +29,14 @@ export default async function LocaleLayout({ children }: Props) {
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html suppressHydrationWarning lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <QueryProvider>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          </ThemeProvider>
         </QueryProvider>
       </body>
     </html>

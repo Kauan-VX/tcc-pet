@@ -21,6 +21,10 @@
   },
   "Home": {
     "title": "Presentación modelo",
-    "result": "Resultado"
+    "result": "Resultado",
+    "subtitle": "Este es un modelo para iniciar nuevos proyectos con Next.js, TypeScript, Tailwind CSS y otras tecnologías modernas.",
+    "exampleComponentsTitle": "Componentes de ejemplo",
+    "exampleComponentsDescription": "Vea algunos ejemplos de componentes reutilizables creados con Radix UI y Tailwind CSS.",
+    "exampleHooksDescription": "Vea algunos ejemplos de hooks reutilizables creados con React y TypeScript."
   }
 }

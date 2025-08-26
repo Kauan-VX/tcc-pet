@@ -6,21 +6,21 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-ring)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
         default:
-          'bg-[var(--color-primary)] text-[var(--color-primary-foreground)] hover:bg-[var(--color-primary)]/90',
+          'bg-(--color-primary) text-primary-foreground hover:bg-(--color-primary)/90',
         destructive:
-          'bg-[var(--color-destructive)] text-[var(--color-destructive-foreground)] hover:bg-[var(--color-destructive)]/90',
+          'bg-destructive text-(--color-destructive-foreground) hover:bg-destructive/90',
         outline:
-          'border border-[var(--color-input)] bg-[var(--color-background)] hover:bg-[var(--color-accent)] hover:text-[var(--color-accent-foreground)]',
+          'border border-(--color-input) bg-(--color-background) hover:bg-(--color-accent) hover:text-(--color-accent-foreground)',
         secondary:
-          'bg-[var(--color-secondary)] text-[var(--color-secondary-foreground)] hover:bg-[var(--color-secondary)]/80',
+          'bg-(--color-secondary) text-(--color-secondary-foreground) hover:bg-(--color-secondary)/80',
         ghost:
-          'hover:bg-[var(--color-accent)] hover:text-[var(--color-accent-foreground)]',
-        link: 'text-[var(--color-primary)] underline-offset-4 hover:underline',
+          'hover:bg-(--color-accent) hover:text-(--color-accent-foreground)',
+        link: 'text-(--color-primary) underline-offset-4 hover:underline',
       },
       size: {
         default: 'h-10 px-4 py-2',

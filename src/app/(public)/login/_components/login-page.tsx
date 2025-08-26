@@ -1,8 +1,9 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
-import LoginForm from '../_components/login-form';
 import LocaleSwitcher from '@/components/locale-switcher';
+import ThemeSwitcher from '@/components/theme-switcher';
+import LoginForm from '../_components/login-form';
 
 const LoginPage = () => {
   const t = useTranslations('LoginPage');
@@ -11,10 +12,14 @@ const LoginPage = () => {
       <div className="absolute right-8 top-8">
         <LocaleSwitcher />
       </div>
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+
+      <div className="absolute right-20 top-8">
+        <ThemeSwitcher />
+      </div>
+      <div className="flex  flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
-          className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+          className="flex dark:bg-mint bg-mint items-center mb-6 text-2xl font-semibold text-gray-900"
         >
           Boilerplate NextJs
         </a>

@@ -61,9 +61,9 @@ Os componentes UI foram atualizados para usar as novas variáveis CSS:
 
 **Exemplo no Button component:**
 
-- `bg-primary` → `bg-[var(--color-primary)]`
-- `text-primary-foreground` → `text-[var(--color-primary-foreground)]`
-- `focus-visible:ring-ring` → `focus-visible:ring-[var(--color-ring)]`
+- `bg-primary` → `bg-(--color-primary)`
+- `text-primary-foreground` → `text-primary-foreground`
+- `focus-visible:ring-ring` → `focus-visible:ring-ring`
 
 ### 6. Funcionalidades Mantidas
 
