@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 
 // Configurações base para o site inteiro
 const siteConfig = {
-  name: 'Boilerplate NextJs',
+  name: 'Adota Match - Adoção Responsável de Pets',
   description:
-    'Um boilerplate moderno para projetos NextJs com as melhores práticas',
-  url: 'https://boilerplate-next.example.com',
-  ogImage: 'https://boilerplate-next.example.com/opengraph-image.jpg',
-  authors: [{ name: 'Equipe Boilerplate' }],
+    'A plataforma mais completa para adoção responsável de cães e gatos no Brasil. Conectamos famílias com pets que precisam de um lar, usando inteligência artificial para matches perfeitos.',
+  url: 'https://adotamatch.com.br',
+  ogImage: 'https://adotamatch.com.br/og-image-adota-match.jpg',
+  authors: [{ name: 'Adota Match Team', url: 'https://adotamatch.com.br' }],
 };
 
 // Metatags padrão para o site
@@ -17,9 +17,26 @@ export const defaultMetadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: [
+    'adoção de pets',
+    'adoção de cães',
+    'adoção de gatos',
+    'adoção responsável',
+    'pets para adoção',
+    'cachorros para adotar',
+    'gatos para adotar',
+    'ONGs de animais',
+    'resgate animal',
+    'amor animal',
+    'cuidados com pets',
+    'castração',
+    'microchipagem',
+    'doação de animais',
+    'família pet',
+  ],
   authors: siteConfig.authors,
-  creator: 'Boilerplate Team',
-  publisher: 'Boilerplate Team',
+  creator: 'Adota Match Team',
+  publisher: 'Adota Match',
   metadataBase: new URL(siteConfig.url),
   alternates: {
     canonical: '/',
@@ -45,7 +62,7 @@ export const defaultMetadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: '@boilerplate',
+    creator: '@adotamatch',
   },
   robots: {
     index: true,

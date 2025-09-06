@@ -1,8 +1,8 @@
-# Next.js Boilerplate
+# Adota Match - Plataforma de Adoção Responsável
 
-Um boilerplate completo e extensível para aplicações Next.js com foco em produtividade, desempenho e experiência de desenvolvimento.
+A maior e mais completa plataforma de adoção responsável de pets do Brasil, desenvolvida com Next.js. Conectamos famílias com cães e gatos que precisam de um lar usando tecnologia avançada e inteligência artificial.
 
-**Autor: Kauan Xavier**
+**Desenvolvido por: Kauan Xavier**
 
 ![Next.js](https://img.shields.io/badge/Next.js-14.2.23-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)

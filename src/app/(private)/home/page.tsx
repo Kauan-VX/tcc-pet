@@ -1,13 +1,13 @@
+import { createMetadata } from '@/lib/metadata';
 import { Metadata } from 'next';
 import HomePage from './_components/home-page';
-import { createMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Dashboard - Boilerplate NextJs',
+  title: 'Dashboard - Adota Match | Sua jornada de adoção',
   description:
-    'Página inicial do seu projeto Boilerplate NextJs. Acesse facilmente todos os recursos e funcionalidades disponíveis.',
+    'Acesse seu painel personalizado no Adota Match. Veja pets compatíveis com seu perfil, acompanhe candidaturas e encontre seu novo melhor amigo de forma responsável.',
   keywords:
-    'dashboard boilerplate, nextjs dashboard, painel administrativo, boilerplate nextjs',
+    'dashboard adoção pets, painel adotante, perfil adoção, pets compatíveis, candidaturas adoção, matching pets, adoção responsável dashboard',
   path: '/home',
   noIndex: false,
 });

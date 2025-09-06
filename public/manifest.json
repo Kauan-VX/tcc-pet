@@ -1,11 +1,13 @@
 {
-  "name": "Next.js Boilerplate",
-  "short_name": "Next Boilerplate",
-  "description": "Um boilerplate completo para aplicações Next.js",
+  "name": "Adota Match - Adoção Responsável de Pets",
+  "short_name": "Adota Match",
+  "description": "A maior plataforma de adoção responsável de pets do Brasil. Encontre seu novo melhor amigo!",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#10b981",
+  "categories": ["social", "lifestyle"],
+  "lang": "pt-BR",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

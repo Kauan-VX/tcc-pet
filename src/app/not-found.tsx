@@ -1,13 +1,13 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Metadata } from 'next';
 import { createMetadata } from '@/lib/metadata';
+import { Metadata } from 'next';
+import Link from 'next/link';
 export const metadata: Metadata = createMetadata({
-  title: 'Página não encontrada - Boilerplate NextJs',
+  title: 'Página não encontrada - Adota Match',
   description:
-    'A página que você está tentando acessar não foi encontrada. Verifique o endereço ou volte para a página inicial.',
-  keywords: '404, página não encontrada, erro, boilerplate nextjs',
+    'A página que você está tentando acessar não foi encontrada. Volte para o Adota Match e continue sua jornada de adoção responsável de pets.',
+  keywords: '404, página não encontrada, erro, adota match, adoção pets',
   path: '/not-found',
   noIndex: true,
 });

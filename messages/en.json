@@ -20,11 +20,11 @@
     "redefinitionLink": "Send reset link"
   },
   "Home": {
-    "title": "Boilerplate presentation",
+    "title": "Adota Match - Connecting Hearts",
     "result": "Result",
-    "subtitle": "This is a boilerplate to start new projects with Next.js, TypeScript, Tailwind CSS and other modern technologies.",
-    "exampleComponentsTitle": "Example components",
-    "exampleComponentsDescription": "See some examples of reusable components built with Radix UI and Tailwind CSS.",
-    "exampleHooksDescription": "See some examples of reusable hooks built with React and TypeScript."
+    "subtitle": "Brazil's most complete platform for responsible pet adoption. Find your new best friend safely and consciously.",
+    "exampleComponentsTitle": "Platform Features",
+    "exampleComponentsDescription": "Discover our advanced tools for intelligent matching, detailed pet profiles and simplified adoption process.",
+    "exampleHooksDescription": "Complete system with AI matching, veterinary history and post-adoption follow-up."
   }
 }
